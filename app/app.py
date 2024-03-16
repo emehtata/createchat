@@ -1,7 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for
 import bleach
+from my_version import VERSION
 
 app = Flask(__name__)
+
+@app.route('/version')
+def version():
+    return VERSION
 
 @app.route('/')
 def index():
@@ -54,4 +59,5 @@ def parse_manuscript(manuscript):
 
 
 if __name__ == '__main__':
+    print(f"Starting version {VERSION}")
     app.run(debug=True, host="0.0.0.0", port=5777)
