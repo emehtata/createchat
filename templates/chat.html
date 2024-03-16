@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+        }        
+        .chat-container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .chat-bubble {
+            max-width: 70%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 15px;
+            clear: both;
+        }
+        .user-a {
+            background-color: #E5E5EA;
+            float: left;
+        }
+        .user-b {
+            background-color: #007bff;
+            float: right;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Chat</h1>
+        <div class="chat">
+            {% for message in conversation %}
+                <div class="chat-bubble {% if message.user == 'A' %}user-a{% else %}user-b{% endif %}">
+                    {{ message.message }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
