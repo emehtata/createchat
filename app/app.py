@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import bleach
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/generate_chat', methods=['POST'])
+@app.route('/generate_chat', methods=['POST', 'GET'])
 def generate_chat():
     if request.method == 'POST':
         manuscript = request.form['manuscript']
@@ -23,7 +23,8 @@ def generate_chat():
                 print(message)
 
         return render_template('chat.html', conversation=conversation, error_message=error_message)
-    return 'Invalid Request'
+
+    return redirect(url_for('index'))
 
 def parse_manuscript(manuscript):
     conversation = []
