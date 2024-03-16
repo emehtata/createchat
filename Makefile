@@ -1,7 +1,7 @@
 NAME=createchat
 NAMESPACE=$(NAME)
 IMAGE=localhost:5000/$(NAME)
-VERSION := $(shell date +%Y.%m.%d)-$(shell git rev-parse --short HEAD)
+VERSION := 0.$(shell date +%y.%m.%d%H%M%S)-$(shell git rev-parse --short HEAD)
 
 build:
 
