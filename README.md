@@ -25,4 +25,6 @@ build image: `make build`
 
 run container: `make run`
 
+Browse to http://localhost:5777
+
 stop and remove container: `make stop`
