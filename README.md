@@ -12,7 +12,9 @@ The script should be in format:
     A: Ok LOL :)
 
 This will create a chat page looking like this:
+
 ![Esimerkkikuva](doc/example.png)
+
 ## Usage
 
 ### Docker
