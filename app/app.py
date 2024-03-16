@@ -43,7 +43,7 @@ def parse_manuscript(manuscript):
             if ':' not in line:
                 line = f"B: {line}"
             
-            user, message = line.split(': ', 1)
+            user, message = line.split(':', 1)
             users.add(user)
             
             if len(users) > 2:
