@@ -11,6 +11,7 @@ The script should be in format:
     B: Sorry the dog was chewing my phone
     A: Ok LOL :)
 
+The right side user must be 'A', the other one can be anything.
 This will create a chat page looking like this:
 
 ![Esimerkkikuva](doc/example.png)

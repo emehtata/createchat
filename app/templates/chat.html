@@ -12,7 +12,8 @@
         <div class="error-message">
             {{ error_message }}
         </div>
-        {% endif %}        
+        {% endif %}
+        <a href="/">Back to Front Page</a>      
         <h1>Chat</h1>
         <div class="chat">
             {% for message in conversation %}
@@ -22,6 +23,5 @@
             {% endfor %}
         </div>
     </div>
-    <a href="/">Back to Front Page</a>
 </body>
 </html>
