@@ -36,8 +36,7 @@ def parse_manuscript(manuscript):
         line = line.strip()
         if line:
             if ':' not in line:
-                error_message = f"Invalid format: Line {line_number} does not contain a user followed by a colon and then a message."
-                break
+                line = f"B: {line}"
             
             user, message = line.split(': ', 1)
             users.add(user)

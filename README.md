@@ -5,13 +5,13 @@ Simple application to create chat bubbles from script.
 The script should be in format:
 
     A: Hello
-    B: Hello
+    Hello
     A: How is it going?
-    A: Still there?
-    B: Sorry the dog was chewing my phone
+    Still there?
+    Sorry the dog was chewing my phone
     A: Ok LOL :)
 
-The right side user must be 'A', the other one can be anything.
+The left side user is identified as 'A' (like Away), the other one can be anything.
 This will create a chat page looking like this:
 
 ![Esimerkkikuva](doc/example.png)
