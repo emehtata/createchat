@@ -22,6 +22,7 @@ spec:
           value: {{ quote .Values.kubernetesClusterDomain }}
         image: {{ .Values.deployment.createchat.image.repository }}:{{ .Values.deployment.createchat.image.tag
           | default .Chart.AppVersion }}
+        imagePullPolicy: {{ .Values.deployment.createchat.imagePullPolicy }}
         name: createchat
         ports:
         - containerPort: 5777

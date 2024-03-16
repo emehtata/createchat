@@ -3,6 +3,7 @@ deployment:
     image:
       repository: localhost:5000/createchat
       tag: latest
+    imagePullPolicy: Always
     resources:
       limits:
         cpu: 100m

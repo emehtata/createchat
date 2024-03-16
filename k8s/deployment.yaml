@@ -17,6 +17,7 @@ spec:
       containers:
       - name: createchat
         image: localhost:5000/createchat:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5777
         resources:
