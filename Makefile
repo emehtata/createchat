@@ -1,4 +1,5 @@
 NAME=createchat
+NAMESPACE=$(NAME)
 IMAGE=localhost:5000/$(NAME)
 
 build:
@@ -13,3 +14,9 @@ stop:
 
 push:
 	docker push $(IMAGE)
+
+install:
+	helm upgrade --install $(NAME) k8s/chart -n $(NAMESPACE) --create-namespace
+
+uninstall:
+	helm uninstall $(NAME) -n $(NAMESPACE)

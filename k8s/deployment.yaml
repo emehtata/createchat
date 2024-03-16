@@ -1,0 +1,41 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: createchat-deployment
+  namespace: createchat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: createchat
+  template:
+    metadata:
+      labels:
+        app: createchat
+    spec:
+      containers:
+      - name: createchat
+        image: localhost:5000/createchat:latest
+        ports:
+        - containerPort: 5777
+        resources:
+          requests:
+            memory: "25Mi"
+            cpu: 10m
+          limits:
+            memory: "50Mi"
+            cpu: 100m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: createchat-service
+  namespace: createchat
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 5777
+    targetPort: 5777
+  selector:
+    app: createchat

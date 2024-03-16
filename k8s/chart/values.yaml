@@ -1,0 +1,19 @@
+deployment:
+  createchat:
+    image:
+      repository: localhost:5000/createchat
+      tag: latest
+    resources:
+      limits:
+        cpu: 100m
+        memory: 50Mi
+      requests:
+        cpu: 10m
+        memory: 25Mi
+  replicas: 1
+kubernetesClusterDomain: cluster.local
+service:
+  ports:
+  - port: 5777
+    targetPort: 5777
+  type: LoadBalancer
