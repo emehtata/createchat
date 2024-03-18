@@ -1,11 +1,11 @@
 NAME=createchat
 NAMESPACE=$(NAME)
 IMAGE=localhost:5000/$(NAME)
-VERSION := $(shell git describe --long)
+VERSION := $(shell git describe)
 
 build:
 
-	echo "VERSION = '$(VERSION)'" > app/my_version.py    
+	echo "VERSION = '$(VERSION)'" > app/my_version.py
 	docker build . -t $(IMAGE)
 
 run:
