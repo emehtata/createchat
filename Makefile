@@ -5,7 +5,7 @@ VERSION := $(shell git describe --long)
 
 build:
 
-	echo "VERSION = '$(VERSION)'" > app/my_version.py    
+	echo "VERSION = '$(VERSION)'" > app/my_version.py
 	docker build . -t $(IMAGE)
 
 run:
