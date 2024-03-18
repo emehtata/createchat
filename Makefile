@@ -1,7 +1,7 @@
 NAME=createchat
 NAMESPACE=$(NAME)
 IMAGE=localhost:5000/$(NAME)
-VERSION := 0.$(shell date +%y.%m.%d%H%M%S)-$(shell git rev-parse --short HEAD)
+VERSION := $(shell git describe --long)
 
 build:
 
@@ -23,3 +23,6 @@ install:
 
 uninstall:
 	helm uninstall $(NAME) -n $(NAMESPACE)
+
+version:
+	echo $(VERSION)
