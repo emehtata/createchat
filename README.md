@@ -4,12 +4,12 @@ Simple application to create chat bubbles from script.
 
 The script should be in format:
 
-    A: Hello
+    A:Hello
     Hello
-    A: How is it going?
-    Still there?
+    A:How is it going?
+    A:Still there?
     Sorry the dog was chewing my phone
-    A: Ok LOL :)
+    A:Ok LOL :)
 
 The left side user is identified as 'A' (like Away), the other one can be anything.
 This will create a chat page looking like this:
